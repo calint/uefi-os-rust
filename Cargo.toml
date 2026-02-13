@@ -4,13 +4,5 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-# Enable 'logger' for printing and 'alloc' if you need heap support
-uefi = { version = "0.36", features = ["logger"] }
-log = "0.4"                                        # Add this line
-
-[profile.dev]
-panic = "abort"
-
-[profile.release]
-panic = "abort"
-lto = true
+log = "0.4.29"
+uefi = { version = "0.36.1", features = ["logger", "panic_handler"] }
