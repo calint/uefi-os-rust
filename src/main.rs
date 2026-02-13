@@ -10,7 +10,7 @@ fn main() -> Status {
         return Status::ABORTED;
     }
 
-    info!("Success! Booting with Rust 1.93 and UEFI 0.31.");
+    info!("Success! Booting with Rust 1.93 and UEFI 0.36.");
 
     loop {
         core::hint::spin_loop();

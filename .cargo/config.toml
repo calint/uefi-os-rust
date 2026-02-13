@@ -2,10 +2,9 @@
 target = "x86_64-unknown-uefi"
 
 [target.x86_64-unknown-uefi]
-runner = "uefi-run -b /usr/share/OVMF/x64/OVMF.4m.fd"
+runner = "./run.sh"
 rustflags = ["-C", "panic=abort"]
 
 [unstable]
-# This allows cargo to re-compile the core library for your specific target
 build-std = ["core", "compiler_builtins", "alloc"]
 build-std-features = ["compiler-builtins-mem"]
